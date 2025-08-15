@@ -53,6 +53,16 @@ input[type="search"]::-webkit-search-results-decoration {
   display: none;
 }
 
+.visualmente-escondido {
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(50%);
+}
+
 /* CABEÇALHO */
 
 .cabecalho__container {
