@@ -40,7 +40,12 @@
               class="pesquisar__input-teclado"
             />
 
-            <button role="tab" aria-selected="false" class="pesquisar__btn">
+            <button
+              role="tab"
+              aria-controls="panel-videos"
+              aria-selected="false"
+              class="pesquisar__btn"
+            >
               <img
                 src="./img/modo_claro/menu_superior/search.svg"
                 alt="ícone de lupa"
@@ -222,6 +227,7 @@
 
           <button
             role="tab"
+            aria-controls="panel-videos"
             aria-selected="false"
             aria-expanded="false"
             aria-controls="links-colapsados"
@@ -268,6 +274,8 @@
       <div role="tablist" class="superior__secao__container">
         <button
           role="tab"
+          aria-controls="panel-videos"
+          id="botao-tudo"
           aria-selected="true"
           name="Tudo"
           class="botao-categoria selecionado"
@@ -277,6 +285,8 @@
 
         <button
           role="tab"
+          aria-controls="panel-videos"
+          id="botao-debates"
           aria-selected="false"
           name="Debates"
           class="botao-categoria"
@@ -286,6 +296,8 @@
 
         <button
           role="tab"
+          aria-controls="panel-videos"
+          id="botao-ao-vivo"
           aria-selected="false"
           name="Ao Vivo"
           class="botao-categoria"
@@ -295,6 +307,8 @@
 
         <button
           role="tab"
+          aria-controls="panel-videos"
+          id="botao-podcast"
           aria-selected="false"
           name="Podcasts"
           class="botao-categoria"
@@ -304,6 +318,8 @@
 
         <button
           role="tab"
+          aria-controls="panel-videos"
+          id="botao-front"
           aria-selected="false"
           name="Front-end"
           class="botao-categoria"
@@ -313,6 +329,8 @@
 
         <button
           role="tab"
+          aria-controls="panel-videos"
+          id="botao-mobile"
           aria-selected="false"
           name="Mobile"
           class="botao-categoria"
@@ -322,6 +340,8 @@
 
         <button
           role="tab"
+          aria-controls="panel-videos"
+          id="botao-data-science"
           aria-selected="false"
           name="Data Science"
           class="botao-categoria"
@@ -331,6 +351,8 @@
 
         <button
           role="tab"
+          aria-controls="panel-videos"
+          id="botao-apps"
           aria-selected="false"
           name="Apps"
           class="botao-categoria"
@@ -340,6 +362,8 @@
 
         <button
           role="tab"
+          aria-controls="panel-videos"
+          id="botao-programacao"
           aria-selected="false"
           name="Programação"
           class="botao-categoria"
@@ -349,6 +373,8 @@
 
         <button
           role="tab"
+          aria-controls="panel-videos"
+          id="botao-ia"
           aria-selected="false"
           name="Inteligência Artificial"
           class="botao-categoria"
@@ -357,6 +383,8 @@
         </button>
         <button
           role="tab"
+          aria-controls="panel-videos"
+          id="botao-inovacao"
           aria-selected="false"
           name="Inovação"
           class="botao-categoria"
@@ -364,8 +392,9 @@
           Inovação
         </button>
       </div>
-
-      <ul class="videos__container"></ul>
+      <div id="panel-videos" aria-labelledby="botao-tudo" role="tabpanel">
+        <ul class="videos__container"></ul>
+      </div>
     </main>
 
     <script src="script.js" type="module"></script>
