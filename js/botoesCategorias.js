@@ -4,10 +4,16 @@ botoesCategorias.forEach((botao) => {
   botao.addEventListener("click", () => {
     const categoriaSelecionada = botao.getAttribute("name");
 
+    associarPainel(botao);
     filtrarPorCategoria(categoriaSelecionada);
     atualizarEstadosDosBotoes(categoriaSelecionada);
   });
 });
+
+function associarPainel(botao) {
+  const painel = document.getElementById("panel-videos");
+  painel.setAttribute("aria-labelledby", botao.id);
+}
 
 function filtrarPorCategoria(filtro) {
   const videos = document.querySelectorAll(".videos__item");
