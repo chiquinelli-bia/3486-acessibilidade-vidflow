@@ -44,17 +44,34 @@ const tabList = document.querySelector('[role="tablist"]');
 
 function navegacaoBotaoPainel(evento) {
   const btn = evento.target;
-  if (evento.key === "ArrowRight") {
-    if (btn === tabList.lastElementChild) {
-      tabList.firstElementChild.focus();
-    } else {
-      btn.nextElementSibling.focus();
-    }
-  } else if (evento.key === "ArrowLeft") {
-    if (btn === tabList.firstElementChild) {
-      tabList.lastElementChild.focus();
-    } else {
-      btn.previousElementSibling.focus();
-    }
+  let newBtn;
+  switch (evento.key) {
+    case "ArrowRight":
+      evento.preventDefault();
+      if (btn === tabList.lastElementChild) {
+        newBtn = tabList.firstElementChild.focus();
+      } else {
+        newBtn = btn.nextElementSibling.focus();
+      }
+      break;
+
+    case "ArrowLeft":
+      evento.preventDefault();
+      if (btn === tabList.firstElementChild) {
+        newBtn = tabList.lastElementChild.focus();
+      } else {
+        newBtn = btn.previousElementSibling.focus();
+      }
+      break;
+    case "Home":
+      newBtn = tabList.firstElementChild.focus();
+      break;
+    case "End":
+      newBtn = tabList.LastElementChild.focus();
+      break;
   }
+  newBtn.focus();
+  novoBotao.scrollIntoView({
+    behavior: "smooth",
+  });
 }
