@@ -9,13 +9,21 @@ O VidFlow é uma plataforma de compartilhamento de vídeos. O projeto já inclui
 ## 🔨 Funcionalidades do projeto
 
 Além das funcionalidades originais do VidFlow, o projeto inclui recursos de acessibilidade, como:
+
 `Avaliação de acessibilidade`: Permite verificar a acessibilidade do projeto, desde revisões rápidas até avaliações complexas usando padrões APG.
+
 `Navegação por teclado`: Implementa navegação intuitiva e acessível em componentes como tablists e botões, facilitando o uso sem mouse.
+
 `Uso de roles ARIA`: Aplica roles como "search", "tablist", "tabpanel" para melhorar a semântica e a navegabilidade para leitores de tela.
+
 `Atualização dinâmica de atributos ARIA`: Ajusta atributos como aria-selected e aria-expanded para refletir o estado atual dos elementos na interface.
+
 `Melhoria na estrutura semântica`: Adiciona headings escondidos (h1, h2) para suporte à acessibilidade e otimização SEO.
+
 `Foco acessível`: Define e controla o foco em elementos interativos, garantindo que o usuário saiba onde está navegando.
+
 `Labels e descrições ARIA`: Adiciona aria-labels, titles e descrições nos botões, links e formulários para melhor compreensão por leitores de tela.
+
 `Suporte ao leitor de tela NVDA`: Considera atalhos e recursos do NVDA para testar e garantir uma experiência inclusiva.
 
 ## ✔️ Técnicas e tecnologias utilizadas
