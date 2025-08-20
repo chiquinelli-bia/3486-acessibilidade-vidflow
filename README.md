@@ -1,40 +1,37 @@
-![Imagem de capa do curso. O título é "3486 - Acessibilidade em HTML, CSS e JavaScript" e o subtítulo é "Avaliando e melhorando um projeto com o NVDA".](./thumb.png)
+![Thumbnail do projeto. O título é "Projeto - Vidflow" e o subtítulo é "adaptado por Bianca Chiquinelli".](Front-end-Projeto%20-%20Vidflow.png)
 
 # VidFlow
 
-O VidFlow é uma plataforma de compartilhamento de vídeos.
+O VidFlow é uma plataforma de compartilhamento de vídeos. O projeto já inclui a estrutura básica em HTML, estilos em CSS e funcionalidades implementadas em JavaScript, como requisições e interações na página. Com base no curso "Acessibilidade em HTML, CSS e JavaScript: avaliando e melhorando um projeto com o NVDA" da Alura, realizamos uma revisão completa do projeto, desde ajustes rápidos até avaliações avançadas de acessibilidade, aplicando melhorias em links, botões, formulários e na estrutura geral da página.
 
 ![Captura de tela do Vidflow.](./vidflow.png)
 
 ## 🔨 Funcionalidades do projeto
 
-Atualmente, o projeto base já está pronto: os vídeos são buscados de uma API, possui modo escuro e os botões interativos funcionam.
-
-No entanto, o projeto possui problemas de acessibilidade, e iremos utilizar o NVDA para indetificá-los e corrigi-los.
+Além das funcionalidades originais do VidFlow, o projeto inclui recursos de acessibilidade, como:
+`Avaliação de acessibilidade`: Permite verificar a acessibilidade do projeto, desde revisões rápidas até avaliações complexas usando padrões APG.
+`Navegação por teclado`: Implementa navegação intuitiva e acessível em componentes como tablists e botões, facilitando o uso sem mouse.
+`Uso de roles ARIA`: Aplica roles como "search", "tablist", "tabpanel" para melhorar a semântica e a navegabilidade para leitores de tela.
+`Atualização dinâmica de atributos ARIA`: Ajusta atributos como aria-selected e aria-expanded para refletir o estado atual dos elementos na interface.
+`Melhoria na estrutura semântica`: Adiciona headings escondidos (h1, h2) para suporte à acessibilidade e otimização SEO.
+`Foco acessível`: Define e controla o foco em elementos interativos, garantindo que o usuário saiba onde está navegando.
+`Labels e descrições ARIA`: Adiciona aria-labels, titles e descrições nos botões, links e formulários para melhor compreensão por leitores de tela.
+`Suporte ao leitor de tela NVDA`: Considera atalhos e recursos do NVDA para testar e garantir uma experiência inclusiva.
 
 ## ✔️ Técnicas e tecnologias utilizadas
 
-- HTML, CSS e JavaScript
-- JSON Server
+- **HTML semântico:** Uso correto de tags para garantir significado e estrutura acessível do conteúdo.
 
-## Link do Figma
+- **ARIA (Accessible Rich Internet Applications):** Implementação de atributos e roles para melhorar a navegação e interação com leitores de tela.
 
-[Acesse o Figma do Vidflow](https://www.figma.com/file/UbPLETdOLAuQk6G09HUtnZ/VidFlow-%7C-Acessibilidade?node-id=0%3A1&mode=dev).
+- **JavaScript acessível:** Dinamização e manipulação de atributos ARIA e foco para garantir atualizações e navegação compatíveis.
 
-## 🛠️ Abrir e rodar o projeto
+- **NVDA:** Ferramenta de leitor de tela utilizada para testes e avaliação da acessibilidade do projeto.
 
-Após baixar ou clonar o projeto deste repositório, você precisa ter o [Node.js](https://nodejs.org/) e o [`json-server`](https://www.npmjs.com/package/json-server) instalados.
+## ☁️ Hospedagem da API no Gist
 
-Caso não tenha o `json-server` instalado globalmente, execute o seguinte comando:
+Para disponibilizar a API de videos para o front-end de forma pública e acessível, a API foi hospedada no Gist do GitHub. Diferente do ambiente local, onde usamos o JSON Server rodando na máquina local, o Gist permite que a API esteja sempre online, pronta para receber requisições reais da aplicação em produção.
 
-```bash
-npm install -g json-server@0.17.4
-```
+## 🛠️ Acesso ao projeto
 
-Com o Node.js e o `json-server` instalados, execute o seguinte comando para disponibilizar a API local de vídeos:
-
-```bash
-json-server --watch backend/videos.json
-```
-
-Em seguida, abra o `index.html` no navegador e o VidFlow já pode ser visualizado!
+Você pode [ acessar o VidFlow através deste link](https://3486-acessibilidade-vidflow.vercel.app/)

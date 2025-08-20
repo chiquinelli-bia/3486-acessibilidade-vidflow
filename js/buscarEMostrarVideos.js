@@ -2,12 +2,15 @@ const containerVideos = document.querySelector(".videos__container");
 
 async function buscarEMostrarVideos() {
   try {
-    const busca = await fetch("http://localhost:3000/videos");
-    const videos = await busca.json();
+    const busca = await fetch(
+      "https://gist.githubusercontent.com/chiquinelli-bia/b485c1f8392f07a0c1c1d2080be71711/raw/8059793ed7b0fbe017e8afeda25807b27d021f60/gistfile1.txt"
+    );
+    const resposta = await busca.json();
+    const videos = resposta.videos;
 
     videos.forEach((video) => {
       if (video.categoria === "") {
-        throw new Error('Vídeo não tem categoria');
+        throw new Error("Vídeo não tem categoria");
       }
       containerVideos.innerHTML += `
         <li class="videos__item">
@@ -24,10 +27,9 @@ async function buscarEMostrarVideos() {
             </div>
         </li>
       `;
-    })
+    });
   } catch (error) {
-    containerVideos.innerHTML = `<p> Houve um erro ao carregar os vídeos: ${error}</p>`
+    containerVideos.innerHTML = `<p> Houve um erro ao carregar os vídeos: ${error}</p>`;
   }
 }
-
 buscarEMostrarVideos();
