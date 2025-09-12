@@ -26,6 +26,8 @@ Além das funcionalidades originais do VidFlow, o projeto inclui recursos de ace
 
 `Suporte ao leitor de tela NVDA`: Considera atalhos e recursos do NVDA para testar e garantir uma experiência inclusiva.
 
+💡 _Este projeto foi uma das etapas em que explorei diferentes formas de estruturar a organização de pastas e arquivos. Hoje sigo um padrão mais consistente, mas deixei essa versão visível para mostrar meu processo de aprendizado_
+
 ## ✔️ Técnicas e tecnologias utilizadas
 
 - **HTML semântico:** Uso correto de tags para garantir significado e estrutura acessível do conteúdo.
